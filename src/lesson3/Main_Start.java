@@ -6,13 +6,13 @@ public class Main_Start {
     public static void main(String[] args) {
 
         System.out.println("\n =============== ЗАДАЧА 1 =====================================================");
-        String [] arrayOfNames = { "John", "Mike", "Sam", "John", "Robin", "Gil", "Ann", "Den", "Natalie", "Ann"};
+        String [] arrayOfNames = { "John", "Mike", "Sam", "John", "Robin", "Gil", "Ann", "Den", "Natalie", "Ann", "Ann"};
         System.out.print("Массив: ");
         for (String element: arrayOfNames) {
             System.out.print (element + ". ");
         }
 
-        List<String> arrayList = new ArrayList<String> ();
+        ArrayList<String> arrayList = new ArrayList<> ();
         HashMap<String, Integer> hashMapNamesAndCount = new HashMap<> ();
 
         for (String name: arrayOfNames) {
@@ -32,16 +32,17 @@ public class Main_Start {
 
 
         System.out.println("\n =============== ЗАДАЧА 2 =====================================================");
-        PhoneBook phoneBook = new PhoneBook();
-        phoneBook.add("Smith", "89061111111");
-        phoneBook.add( "Clark", "89262222222");
-        phoneBook.add( "Pitt", "89263333333");
-        phoneBook.add( "Clark", "89264444444");
+        Book book = new Book();
+        book.add( "Smith", "89262222222");
+        book.add( "Clark", "89262222222");
+        book.add( "Pitt", "89263333333");
+        book.add( "Clark", "89264444444");
+        book.add( "Clark", "89265555555");
 
-        System.out.print("Все записи телефонной книги: "); phoneBook.get();
-        System.out.print("Записи телефонной книги по фамилии Clark: "); phoneBook.get("Clark");
+        System.out.print("Все записи телефонной книги: "); book.get();
+        System.out.print("Записи телефонной книги по фамилии Clark: "); book.get("Clark");
 
-        //System.out.println(arrayList);
+
 
 
     }
